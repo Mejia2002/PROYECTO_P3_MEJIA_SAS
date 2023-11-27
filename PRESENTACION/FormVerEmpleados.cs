@@ -1,4 +1,5 @@
 ﻿using ENTIDADES;
+using iText.Kernel.Pdf.Canvas.Wmf;
 using LOGICA;
 using System;
 using System.Collections.Generic;
@@ -35,8 +36,16 @@ namespace PRESENTACION
                 empleado.SegundoApellido = empleado.SegundoApellido?.ToUpper();
                 empleado.Correo = empleado.Correo?.ToUpper();
                 empleado.TipoContrato = empleado.TipoContrato?.ToUpper();
+                empleado.Estado = empleado.Estado?.ToUpper();
                 empleado.Cargo = empleado.Cargo?.ToUpper();
+
+                if (empleado.FechaFin != DateTime.MinValue && empleado.FechaFin <= DateTime.Today)
+                {
+                    empleado.Estado = "INACTIVO";
+                    EmpleadoLogica.ActualizarEmpleado(empleado); 
+                }
             }
+
             dgvEmpleados.DataSource = empleados;
             dgvEmpleados.Columns["Identificacion"].HeaderText = "Identificación";
             dgvEmpleados.Columns["PrimerNombre"].HeaderText = "Primer Nombre";
@@ -46,10 +55,14 @@ namespace PRESENTACION
             dgvEmpleados.Columns["Telefono"].HeaderText = "Teléfono";
             dgvEmpleados.Columns["Correo"].HeaderText = "Correo";
             dgvEmpleados.Columns["FechaInicio"].HeaderText = "Fecha de Inicio";
+            dgvEmpleados.Columns["FechaFin"].HeaderText = "Fecha Finalización";
             dgvEmpleados.Columns["TipoContrato"].HeaderText = "Tipo de Contrato";
+            dgvEmpleados.Columns["Estado"].HeaderText = "Estado";
             dgvEmpleados.Columns["Cargo"].HeaderText = "Cargo";
             dgvEmpleados.Columns["Salario"].HeaderText = "Salario";
+            dgvEmpleados.Columns["Salario"].DefaultCellStyle.Format = "N0";
         }
+
         private void DgvEmpleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
@@ -162,8 +175,9 @@ namespace PRESENTACION
                 string primerNombre = filaSeleccionada.Cells["PrimerNombre"].Value.ToString();
                 string primerApellido = filaSeleccionada.Cells["PrimerApellido"].Value.ToString();
                 DateTime fechaInicio = Convert.ToDateTime(filaSeleccionada.Cells["FechaInicio"].Value);
-                FormVerLiquidaciones formLiquidaciones = new FormVerLiquidaciones(identificacion, primerNombre, primerApellido, fechaInicio);
-                formLiquidaciones.ShowDialog();
+                DateTime fechaFin = Convert.ToDateTime(filaSeleccionada.Cells["FechaFin"].Value);
+                FormLiquidarE formLiquidarE = new FormLiquidarE(identificacion, primerNombre, primerApellido, fechaInicio, fechaFin);
+                formLiquidarE.ShowDialog();
             }
             else
             {
@@ -181,9 +195,10 @@ namespace PRESENTACION
                 string identificacion = filaSeleccionada.Cells["Identificacion"].Value.ToString();
                 string primerNombre = filaSeleccionada.Cells["PrimerNombre"].Value.ToString();
                 string primerApellido = filaSeleccionada.Cells["PrimerApellido"].Value.ToString();
+                double salario = Convert.ToDouble(filaSeleccionada.Cells["Salario"].Value);
 
-                FormPagoSueldo formPagoSueldo = new FormPagoSueldo(identificacion, primerNombre, primerApellido);
-                formPagoSueldo.ShowDialog();
+                FormPagar formPagar = new FormPagar(identificacion, primerNombre, primerApellido, salario);
+                formPagar.ShowDialog();
             }
             else
             {
@@ -194,6 +209,66 @@ namespace PRESENTACION
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnNuevoContrato_Click(object sender, EventArgs e)
+        {
+            if (dgvEmpleados.SelectedRows.Count > 0)
+            {
+                DataGridViewRow filaSeleccionada = dgvEmpleados.SelectedRows[0];
+
+                string identificacion = filaSeleccionada.Cells["Identificacion"].Value.ToString();
+                string primerNombre = filaSeleccionada.Cells["PrimerNombre"].Value.ToString();
+                string primerApellido = filaSeleccionada.Cells["PrimerApellido"].Value.ToString();
+                string estado = filaSeleccionada.Cells["Estado"].Value.ToString(); 
+
+                if (string.Equals(estado, "Inactivo", StringComparison.OrdinalIgnoreCase))
+                {
+                    FormNuevoContrato formNuevoContrato = new FormNuevoContrato(identificacion, primerNombre, primerApellido);
+                    formNuevoContrato.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("El empleado seleccionado debe estar en estado Inactivo para crear un nuevo contrato.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un empleado para realizar el pago.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        
+
+        private void btnDesactivar_Click(object sender, EventArgs e)
+        {
+            if (dgvEmpleados.SelectedRows.Count > 0)
+            {
+                DataGridViewRow filaSeleccionada = dgvEmpleados.SelectedRows[0];
+
+                Empleado empleado = (Empleado)filaSeleccionada.DataBoundItem;
+                empleado.DesactivarEmpleado();
+
+                try
+                {
+                    EmpleadoLogica.ActualizarEmpleado(empleado);
+                    MessageBox.Show("Empleado desactivado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarDatos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al desactivar el empleado: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un empleado para desactivar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            CargarDatos();
         }
     }
 }

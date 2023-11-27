@@ -68,6 +68,7 @@ namespace PRESENTACION
             dgvPagosSueldo.Columns["TipoPago"].HeaderText = "Tipo de Pago";
             dgvPagosSueldo.Columns["MontoPagado"].HeaderText = "Monto Pagado";
             dgvPagosSueldo.Columns["Detalles"].HeaderText = "Detalles";
+            dgvPagosSueldo.Columns["MontoPagado"].DefaultCellStyle.Format = "N0";
 
         }
         private void LimpiarFormularioPagoSueldo()

@@ -40,6 +40,7 @@ namespace PRESENTACION
                     Telefono = txtTelefono.Text,
                     Correo = txtCorreo.Text,
                     FechaInicio = txtFecha.Value,
+                    FechaFin = txtFechaFin.Value,
                     Cargo = cboCargo.SelectedItem.ToString(),
                     TipoContrato = cboTipoContrato.SelectedItem.ToString(),
                     Salario = Convert.ToDouble(txtSalario.Text)
@@ -58,7 +59,7 @@ namespace PRESENTACION
         private void CargarComboBox()
         {
             cboCargo.Items.AddRange(new string[] { "Siso", "Obrero", "Guadañador", "Conductor" });
-            cboTipoContrato.Items.Add("Indefinido");
+            cboTipoContrato.Items.AddRange(new string[] { "Indefinido", "Proyecto"});
         }
 
 
@@ -81,6 +82,7 @@ namespace PRESENTACION
             txtTelefono.Clear();
             txtCorreo.Clear();
             txtFecha.Value = DateTime.Now;
+            txtFechaFin.Value = DateTime.Now;
             cboCargo.SelectedIndex = -1;
             cboTipoContrato.SelectedIndex = -1;
             txtSalario.Clear();
@@ -112,6 +114,7 @@ namespace PRESENTACION
                         Telefono = txtTelefono.Text,
                         Correo = txtCorreo.Text,
                         FechaInicio = txtFecha.Value,
+                        FechaFin = txtFechaFin.Value,
                         Cargo = cboCargo.SelectedItem.ToString(),
                         TipoContrato = cboTipoContrato.SelectedItem.ToString(),
                         Salario = Convert.ToDouble(txtSalario.Text)
@@ -176,7 +179,10 @@ namespace PRESENTACION
 
                                 rect = new XRect(10, 320, page.Width, page.Height);
                                 tf.DrawString($"Fecha de Inicio: {empleado.FechaInicio.ToShortDateString()}", font, XBrushes.Black, rect, XStringFormats.TopLeft);
-
+                                
+                                rect = new XRect(10, 330, page.Width, page.Height);
+                                tf.DrawString($"Fecha de Finalizacion: {empleado.FechaFin.ToShortDateString()}", font, XBrushes.Black, rect, XStringFormats.TopLeft);
+                                
                                 rect = new XRect(10, 340, page.Width, page.Height);
                                 tf.DrawString($"Cargo: {empleado.Cargo}", font, XBrushes.Black, rect, XStringFormats.TopLeft);
 

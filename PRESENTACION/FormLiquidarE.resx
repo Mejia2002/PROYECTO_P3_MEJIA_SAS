@@ -117,23 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label12.Text" xml:space="preserve">
-    <value>Empresa: Mejía SAS.
-
-Actividad de la Empresa: Mantenimiento Vial.
-
-Horario de Trabajo: Lunes a Viernes de 6:30 am a 4:00 pm 
-(con almuerzo de 12:00 pm a 2:00 pm),
-Sábados hasta las 12:00 pm.
-
-Forma de Pago: Quincenal.
-
-Forma de Pago de la Liquidación: La liquidación
-se calcula mediante la fórmula:
-(Sueldo Base * Días Trabajados) / 30.
-
-
-
-</value>
-  </data>
 </root>

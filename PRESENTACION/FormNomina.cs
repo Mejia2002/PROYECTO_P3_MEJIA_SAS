@@ -36,11 +36,12 @@ namespace PRESENTACION
             dgvNomina.DataSource = nominas;
             dgvNomina.Columns["IdPago"].HeaderText = "ID Pago";
             dgvNomina.Columns["IdEmpleado"].HeaderText = "ID Empleado";
-            dgvNomina.Columns["PrimerNombreEmpleado"].HeaderText = "Primer Nombre Empleado";
-            dgvNomina.Columns["PrimerApellidoEmpleado"].HeaderText = "Primer Apellido Empleado";
+            dgvNomina.Columns["PrimerNombreEmpleado"].HeaderText = "Primer Nombre";
+            dgvNomina.Columns["PrimerApellidoEmpleado"].HeaderText = "Primer Apellido";
             dgvNomina.Columns["FechaPago"].HeaderText = "Fecha de Pago";
             dgvNomina.Columns["TipoPago"].HeaderText = "Tipo de Pago";
             dgvNomina.Columns["MontoPagado"].HeaderText = "Monto Pagado";
+            dgvNomina.Columns["MontoPagado"].DefaultCellStyle.Format = "N0";
             dgvNomina.Columns["Detalles"].HeaderText = "Detalles";
         }
         private void CargarDatosEnDgvNomina(List<Nomina> nominas)

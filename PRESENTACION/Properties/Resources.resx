@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Carretera principal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Carretera principal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EMPLEADOS MEJIASAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EMPLEADOS MEJIASAS.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PAGO SUELDO MEJIA SAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PAGO SUELDO MEJIA SAS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,22 +127,28 @@
   <data name="LIQUIDACION MEJIASAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LIQUIDACION MEJIASAS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PAGO QUINCENA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PAGO QUINCENA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CONTRATO MEJIASAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CONTRATO MEJIASAS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="th" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\th.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Empleados principal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Empleados principal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="NOMINA EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NOMINA EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EMPLEADOS MEJIASAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EMPLEADOS MEJIASAS.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Empleados principal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Empleados principal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MANTENIMINETO VIAL MEJIA SAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MANTENIMINETO VIAL MEJIA SAS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carretera principal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Carretera principal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FORMLIQUIDAR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FORMLIQUIDAR.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -17,6 +17,7 @@ namespace DATOS
                            $"'{empleado.PrimerApellido}', '{empleado.SegundoApellido}', " +
                            $"'{empleado.Telefono}', '{empleado.Correo}', " +
                            $"TO_DATE('{empleado.FechaInicio.ToString("yyyy-MM-dd")}', 'YYYY-MM-DD'), " +
+                           $"TO_DATE('{empleado.FechaFin.ToString("yyyy-MM-dd")}', 'YYYY-MM-DD'), " +
                            $"'{empleado.TipoContrato}', '{empleado.Cargo}', {empleado.Salario})";
 
             using (OracleConnection connection = ConexionOracle.ObtenerConexion())
@@ -64,7 +65,9 @@ namespace DATOS
                                 Telefono = reader["telefono"].ToString(),
                                 Correo = reader["correo"].ToString(),
                                 FechaInicio = Convert.ToDateTime(reader["fechaInicio"]),
+                                FechaFin = Convert.ToDateTime(reader["fechaFin"]),
                                 TipoContrato = reader["tipoContrato"].ToString(),
+                                Estado = reader["estado"].ToString(),
                                 Cargo = reader["cargo"].ToString(),
                                 Salario = Convert.ToDouble(reader["salario"])
                             };
@@ -87,7 +90,9 @@ namespace DATOS
                            $"telefono = '{empleado.Telefono}', " +
                            $"correo = '{empleado.Correo}', " +
                            $"fechaInicio = TO_DATE('{empleado.FechaInicio.ToString("yyyy-MM-dd")}', 'YYYY-MM-DD'), " +
+                           $"fechaFin = TO_DATE('{empleado.FechaFin.ToString("yyyy-MM-dd")}', 'YYYY-MM-DD'), " +
                            $"tipoContrato = '{empleado.TipoContrato}', " +
+                            $"estado = '{empleado.Estado}', " +
                            $"cargo = '{empleado.Cargo}', " +
                            $"salario = {empleado.Salario} " +
                            $"WHERE identificacion = '{empleado.Identificacion}'";
@@ -124,7 +129,9 @@ namespace DATOS
                                 Telefono = reader["telefono"].ToString(),
                                 Correo = reader["correo"].ToString(),
                                 FechaInicio = Convert.ToDateTime(reader["fechaInicio"]),
+                                FechaFin = Convert.ToDateTime(reader["fechaFin"]),
                                 TipoContrato = reader["tipoContrato"].ToString(),
+                                Estado = reader["estado"].ToString(),
                                 Cargo = reader["cargo"].ToString(),
                                 Salario = Convert.ToDouble(reader["salario"])
                             };

@@ -31,7 +31,8 @@ namespace DATOS
                                 FechaPago = Convert.ToDateTime(reader["fecha_pago"]),
                                 TipoPago = reader["tipo_pago"].ToString(),
                                 MontoPagado = Convert.ToDouble(reader["monto_pagado"]),
-                                Detalles = reader["detalles"].ToString()
+                                Detalles = reader["detalles"].ToString(),
+                                IdPagoAsociado = Convert.ToInt32(reader["id_pago_asociado"])
                             };
                         }
                     }
@@ -62,7 +63,8 @@ namespace DATOS
                                 FechaPago = Convert.ToDateTime(reader["fecha_pago"]),
                                 TipoPago = reader["tipo_pago"].ToString(),
                                 MontoPagado = Convert.ToDouble(reader["monto_pagado"]),
-                                Detalles = reader["detalles"].ToString()
+                                Detalles = reader["detalles"].ToString(),
+                                IdPagoAsociado = Convert.ToInt32(reader["id_pago_asociado"])
                             };
                         }
                     }

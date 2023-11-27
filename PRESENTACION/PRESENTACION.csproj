@@ -151,6 +151,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormNuevoContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoContrato.Designer.cs">
+      <DependentUpon>FormNuevoContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLiquidarE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLiquidarE.Designer.cs">
+      <DependentUpon>FormLiquidarE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPagar.Designer.cs">
+      <DependentUpon>FormPagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +208,9 @@
     <Compile Include="Org\BouncyCastle\Security\ProviderInstaller.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormLiquidarE.resx">
+      <DependentUpon>FormLiquidarE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLiquidacion.resx">
       <DependentUpon>FormLiquidacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +219,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNomina.resx">
       <DependentUpon>FormNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoContrato.resx">
+      <DependentUpon>FormNuevoContrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPagar.resx">
+      <DependentUpon>FormPagar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPagoSueldo.resx">
       <DependentUpon>FormPagoSueldo.cs</DependentUpon>
@@ -268,6 +295,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MANTENIMINETO VIAL MEJIA SAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PAGO QUINCENA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FORMLIQUIDAR.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

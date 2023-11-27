@@ -103,6 +103,16 @@ namespace PRESENTACION.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FORMLIQUIDAR {
+            get {
+                object obj = ResourceManager.GetObject("FORMLIQUIDAR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LIQUIDACION_MEJIASAS {
             get {
                 object obj = ResourceManager.GetObject("LIQUIDACION MEJIASAS", resourceCulture);
@@ -126,6 +136,16 @@ namespace PRESENTACION.Properties {
         internal static System.Drawing.Bitmap NOMINA_EMPLEADOS {
             get {
                 object obj = ResourceManager.GetObject("NOMINA EMPLEADOS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PAGO_QUINCENA {
+            get {
+                object obj = ResourceManager.GetObject("PAGO QUINCENA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

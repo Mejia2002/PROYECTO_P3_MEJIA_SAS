@@ -61,6 +61,7 @@ namespace PRESENTACION
             dgvLiquidaciones.Columns["FechaFin"].HeaderText = "Fecha de Fin";
             dgvLiquidaciones.Columns["DiasTrabajados"].HeaderText = "Días Trabajados";
             dgvLiquidaciones.Columns["MontoPagado"].HeaderText = "Monto Pagado";
+            dgvLiquidaciones.Columns["MontoPagado"].DefaultCellStyle.Format = "N0";
             dgvLiquidaciones.Columns["Detalles"].HeaderText = "Detalles";
         }
 

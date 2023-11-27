@@ -83,7 +83,7 @@
             this.btnLiquidar.Name = "btnLiquidar";
             this.btnLiquidar.Size = new System.Drawing.Size(173, 53);
             this.btnLiquidar.TabIndex = 2;
-            this.btnLiquidar.Text = "LIQUIDAR";
+            this.btnLiquidar.Text = "VER LIQUIDACIONES";
             this.btnLiquidar.UseVisualStyleBackColor = false;
             this.btnLiquidar.Click += new System.EventHandler(this.btnLiquidar_Click);
             // 
@@ -95,7 +95,7 @@
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(173, 53);
             this.btnPagar.TabIndex = 3;
-            this.btnPagar.Text = "PAGAR";
+            this.btnPagar.Text = "VER PAGOS";
             this.btnPagar.UseVisualStyleBackColor = false;
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
@@ -107,7 +107,7 @@
             this.btnNomina.Name = "btnNomina";
             this.btnNomina.Size = new System.Drawing.Size(173, 53);
             this.btnNomina.TabIndex = 4;
-            this.btnNomina.Text = "NOMINA";
+            this.btnNomina.Text = "VER NOMINA";
             this.btnNomina.UseVisualStyleBackColor = false;
             this.btnNomina.Click += new System.EventHandler(this.btnNomina_Click);
             // 
@@ -205,10 +205,10 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Red;
-            this.btnSalir.Location = new System.Drawing.Point(682, 460);
+            this.btnSalir.Location = new System.Drawing.Point(721, 468);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(173, 53);
+            this.btnSalir.Size = new System.Drawing.Size(134, 40);
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -219,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(930, 520);
+            this.ClientSize = new System.Drawing.Size(930, 534);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label1);
